@@ -425,6 +425,7 @@ header #burgerBtn {
       -ms-flex-align: center;
           align-items: center;
   margin: 0 auto;
+  font-family: "Oswald", sans-serif;
 }
 
 .border {
@@ -568,7 +569,9 @@ header #burgerBtn {
 }
 
 h2 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  letter-spacing: 5px;
   color: #fff;
   margin: 20px;
   opacity: 0;
@@ -635,7 +638,6 @@ h2 {
 .bloc2 {
   margin-top: 3em;
   text-align: center;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -682,6 +684,7 @@ h2 {
 
 .bloc2 .aboutbox .boxContent ul {
   list-style: none;
+  white-space: nowrap;
 }
 
 .bloc2 .aboutbox .boxContent li {
@@ -713,6 +716,20 @@ h2 {
 
 #pricing ul {
   text-align: center;
+}
+
+#contactBox {
+  background: #00000087;
+  text-align: center;
+}
+
+#contactBox i {
+  font-size: 60px;
+}
+
+#contactBox h3 {
+  margin: 0;
+  letter-spacing: 3px;
 }
 
 .landScapeAlert {
