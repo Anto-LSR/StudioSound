@@ -85,6 +85,7 @@ header {
   transition: all 500ms ease;
 
   position: fixed;
+  top: 0%;
   width: 100vw;
   border-bottom: 1px solid white;
 
@@ -577,3 +578,26 @@ h2 {
     text-align: center;
   }
 }
+
+.landScapeAlert{
+  display: none;
+}
+
+
+@media (orientation: landscape) {
+  .lockLandscape{
+    display: none;
+  }
+  body{overflow: hidden;}
+  .landScapeAlert{
+    display: block;
+    text-align: center;
+    align-items: center;
+    height: 100vh;
+    h3{font-size: 24px;}
+    img{
+      width: 13%;
+    }
+    
+  }
+  }

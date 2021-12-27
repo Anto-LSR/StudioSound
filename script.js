@@ -1,3 +1,6 @@
+
+
+
 // NAVBAR
 
 let burgerBtn = document.getElementById("burgerBtn");
@@ -36,24 +39,32 @@ let touchstartX = 0
 let touchendX = 0
 let icon = document.getElementById("swipeIcon")
 
+
 function handleGesture() {
-  if (touchendX + 50 < touchstartX){
+  
+
+  if (touchendX +50  < touchstartX){  //LEFT
     rightswipe()
+    icon.classList.add("hidden")
   }
-  if (touchendX - 50 > touchstartX){
+  if (touchendX -50  > touchstartX){ // RIGHT
     leftswipe()
+    icon.classList.add("hidden")
+    
   }
 }
 
 slider.addEventListener('touchstart', e => {
   touchstartX = e.changedTouches[0].screenX
   
+  
 })
 
 slider.addEventListener('touchend', e => {
   touchendX = e.changedTouches[0].screenX
   handleGesture()
-  icon.classList.add("hidden")
+  
+  
 })
 
 

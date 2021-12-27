@@ -90,6 +90,7 @@ header {
   -webkit-transition: all 500ms ease;
   transition: all 500ms ease;
   position: fixed;
+  top: 0%;
   width: 100vw;
   border-bottom: 1px solid white;
 }
@@ -712,5 +713,32 @@ h2 {
 
 #pricing ul {
   text-align: center;
+}
+
+.landScapeAlert {
+  display: none;
+}
+
+@media (orientation: landscape) {
+  .lockLandscape {
+    display: none;
+  }
+  body {
+    overflow: hidden;
+  }
+  .landScapeAlert {
+    display: block;
+    text-align: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 100vh;
+  }
+  .landScapeAlert h3 {
+    font-size: 24px;
+  }
+  .landScapeAlert img {
+    width: 13%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
