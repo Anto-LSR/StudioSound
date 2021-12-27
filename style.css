@@ -10,7 +10,7 @@ html {
 
 body {
   overflow-x: hidden;
-  background-image: url(/img/DSC00030.jpg);
+  background-image: url(./img/DSC00030.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -464,12 +464,12 @@ header #burgerBtn {
 }
 
 .card0 {
-  background: url("/img/sagacosmica.png") center center no-repeat;
+  background: url("./img/sagacosmica.png") center center no-repeat;
   background-size: 400px;
 }
 
 .card0:hover {
-  background: url("/img/sagacosmica.png") bottom center no-repeat;
+  background: url("./img/sagacosmica.png") bottom center no-repeat;
   background-size: 610px;
 }
 
@@ -486,12 +486,12 @@ header #burgerBtn {
 }
 
 .card1 {
-  background: url("/img/oliv.png") top center no-repeat;
+  background: url("./img/oliv.png") top center no-repeat;
   background-size: 400px;
 }
 
 .card1:hover {
-  background: url("/img/oliv.png") top center no-repeat;
+  background: url("./img/oliv.png") top center no-repeat;
   background-size: 600px;
 }
 
@@ -513,7 +513,7 @@ header #burgerBtn {
 }
 
 .card2 {
-  background: url("/img/laloma.jpg") top center no-repeat;
+  background: url("./img/laloma.jpg") top center no-repeat;
   background-size: 400px;
 }
 
@@ -523,7 +523,7 @@ header #burgerBtn {
 }
 
 .card2:hover {
-  background: url("/img/laloma.jpg") top center no-repeat;
+  background: url("./img/laloma.jpg") top center no-repeat;
   background-size: 600px;
 }
 
@@ -545,12 +545,12 @@ header #burgerBtn {
 }
 
 .card3 {
-  background: url("/img/Stella.jpg") right center no-repeat;
+  background: url("./img/Stella.jpg") right center no-repeat;
   background-size: 600px;
 }
 
 .card3:hover {
-  background: url("/img/Stella.jpg") left center no-repeat;
+  background: url("./img/Stella.jpg") left center no-repeat;
   background-size: 800px;
 }
 
