@@ -356,11 +356,11 @@ header {
   position: relative;
 }
 .card0 {
-  background: url("/img/sagacosmica.png") center center no-repeat;
+  background: url("./img/sagacosmica.png") center center no-repeat;
   background-size: 400px;
 }
 .card0:hover {
-  background: url("/img/sagacosmica.png") bottom center no-repeat;
+  background: url("./img/sagacosmica.png") bottom center no-repeat;
   background-size: 610px;
 }
 .card0:hover h2 {
@@ -375,11 +375,11 @@ header {
 }
 
 .card1 {
-  background: url("/img/oliv.png") top center no-repeat;
+  background: url("./img/oliv.png") top center no-repeat;
   background-size: 400px;
 }
 .card1:hover {
-  background: url("/img/oliv.png") top center no-repeat;
+  background: url("./img/oliv.png") top center no-repeat;
   background-size: 600px;
 }
 .card1:hover h2 {
@@ -399,7 +399,7 @@ header {
 }
 
 .card2 {
-  background: url("/img/laloma.jpg") top center no-repeat;
+  background: url("./img/laloma.jpg") top center no-repeat;
   background-size: 400px;
   h2,
   .fa {
@@ -407,7 +407,7 @@ header {
   }
 }
 .card2:hover {
-  background: url("/img/laloma.jpg") top center no-repeat;
+  background: url("./img/laloma.jpg") top center no-repeat;
   background-size: 600px;
 }
 .card2:hover h2 {
@@ -427,11 +427,11 @@ header {
 }
 
 .card3 {
-  background: url("/img/Stella.jpg") right center no-repeat;
+  background: url("./img/Stella.jpg") right center no-repeat;
   background-size: 600px;
 }
 .card3:hover {
-  background: url("/img/Stella.jpg") left center no-repeat;
+  background: url("./img/Stella.jpg") left center no-repeat;
   background-size: 800px;
 }
 .card3:hover h2 {
