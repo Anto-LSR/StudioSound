@@ -37,10 +37,10 @@ let touchendX = 0
 let icon = document.getElementById("swipeIcon")
 
 function handleGesture() {
-  if (touchendX + 100 < touchstartX){
+  if (touchendX + 50 < touchstartX){
     rightswipe()
   }
-  if (touchendX + 100 > touchstartX){
+  if (touchendX - 50 > touchstartX){
     leftswipe()
   }
 }
