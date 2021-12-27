@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Studio Sound</title>
+
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@7/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <header id="header">
+      <h1 id="title">STUDIO SOUND</h1>
+      <nav id="primaryNav" class="hidden">
+        <ul>
+          <li>ACCUEIL</li>
+          <li>REFERENCES</li>
+          <li>A PROPOS</li>
+          <li>CONTACT</li>
+        </ul>
+      </nav>
+      <span id="burgerBtn"><i class="fas fa-bars"></i></span>
+      <span id="crossBtn" class="hidden"><i class="fas fa-times"></i></span>
+    </header>
+
+    <div id="mobileNav" class="mobileNav">
+      <ul id="mobileUl">
+        <span onclick="closeNav()" id="crossBtn" class=""
+          ><i class="fas fa-times"></i
+        ></span>
+        <li><a href="#" onclick="closeNav()">ACCUEIL</a></li>
+        <li><a onclick="closeNav()" href="#part1">REFERENCES</a></li>
+        <li>A PROPOS</li>
+        <li>CONTACT</li>
+      </ul>
+    </div>
+
+    <div class="homePage" id="home">
+      <h1>STUDIO SOUND</h1>
+      <h3 class="topPage">MIX & MASTERING</h3>
+
+      <div class="arrow">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div class="page1" id="part1">
+      <h1 id="referencesTitle">REFERENCES</h1>
+
+      <div class="references" id="references">
+        <div class="handswipe" id="swipeIcon">
+          <img src="./img/slideIcon.png" />
+        </div>
+        <!-- <div class="cardsArrow">
+          <div class="leftArrow" id="leftArrow">
+            <i class="fas fa-angle-left"></i>
+          </div>
+      
+          <div class="rightArrow" id="rightArrow">
+      
+            <i class="fas fa-angle-right"></i>
+          </div>
+      
+      
+        </div> -->
+        <div class="cardsContainer" id="cardsContainer">
+          <div class="cardOne">
+            <div class="container">
+              <div class="card card0">
+                <div class="border">
+                  <h2>Passion Coco</h2>
+                  <button class="listenBtn">ECOUTER</button>
+                  <div class="icons">
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardTwo">
+            <div class="container">
+              <div class="card card1">
+                <div class="border">
+                  <h2>Oliv</h2>
+                  <button class="listenBtn">ECOUTER</button>
+                  <div class="icons">
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardThree">
+            <div class="container">
+              <div class="card card2">
+                <div class="border">
+                  <h2>La LØMA</h2>
+                  <button class="listenBtn">ECOUTER</button>
+                  <div class="icons">
+                    <i class="fa fa-codepen" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="cardFour">
+            <div class="container">
+              <div class="card card3">
+                <div class="border">
+                  <h2>STELLA</h2>
+                  <button class="listenBtn">ECOUTER</button>
+                  <div class="icons">
+                    <i class="fa fa-codepen" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-dribbble" aria-hidden="true"></i>
+                    <i class="fa fa-twitter" aria-hidden="true"></i>
+                    <i class="fa fa-facebook" aria-hidden="true"></i>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="cardFive"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bloc2">
+      <h1>A PROPOS</h1>
+      <div id="experience" class="aboutbox">
+        <h3>STUDIO SOUND</h3>
+        <div class="expContent boxContent">
+          
+          <ul>
+            <li>20 ANS D'EXPERIENCE</li>
+            <li>TOUT GENRE MUSICAL</li>
+            <li>ADAPTE AU STREAMING</li>
+            <li>RESULTAT PROFESSIONNEL</li>
+          </ul>
+          <img src="./img/expicon.png" alt="" />
+        </div>
+      </div>
+      <div id="hardware" class="aboutbox">
+        <h3>HARDWARE</h3>
+        <div class="hardwareContent boxContent">
+          <img src="./img/sound-mixer.png" alt="" />
+          <ul>
+            <li>PRE-AMPLIS NEVE, API</li>
+            <li>SOMMATION ANALOGIQUE</li>
+            <li>BUS COMPRESSOR TK AUDIO</li>
+          </ul>
+        </div>
+      </div>
+
+      <div id="plugins" class="aboutbox">
+        <h3>PLUGINS</h3>
+        <div class="pluginContent boxContent">
+          
+          <ul>
+            <li>SOFTUBE</li>
+            <li>UNIVERSAL AUDIO</li>
+            <li>KUSH AUDIO</li>
+            <li>SOUNDTOYS</li>
+          </ul>
+          <img src="./img/plugins.png" alt="" />
+        </div>
+      </div>
+
+      <div id="pricing" class="aboutbox">
+        <h3>TARIFS</h3>
+        <div class="tarifContent boxContent">
+          <img src="./img/pricing.png" alt="" />
+          <ul>
+            <li>EN ADEQUATION</li>
+            <li>AVEC CHAQUE</li>
+            <li>PROJET</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2d3b7349a5.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
