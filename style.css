@@ -1,7 +1,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @supports (-webkit-touch-callout: none) {
-  body {
-    background-size: auto 100vh;
+  body .homePage {
+    background: url(./img/mobilebg1.png);
+  }
+  body .page1 {
+    background: url(./img/mobilebg2.png);
+  }
+  body .bloc2 {
+    background: url(./img/mobilebg3.png);
   }
 }
 

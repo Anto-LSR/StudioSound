@@ -6,7 +6,16 @@
 
 @supports (-webkit-touch-callout: none) {
   body{
-    background-size:auto 100vh ;
+    .homePage{
+      background: url(./img/mobilebg1.png);
+    }
+    .page1{
+      background: url(./img/mobilebg2.png);
+    }
+    .bloc2{
+      background: url(./img/mobilebg3.png);
+    }
+
   }
 }
 
