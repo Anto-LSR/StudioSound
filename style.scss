@@ -5,34 +5,45 @@
 }
 
 @supports (-webkit-touch-callout: none) {
-  body{
-    .homePage{
+  body {
+    background: black;
+    header {
+      opacity: 1 !important;
+      background: black;
+    }
+    .homePage {
       background: url(./img/mobilebg1.png);
     }
-    .page1{
+    .page1 {
       background: url(./img/mobilebg2.png);
+      padding: 0;
     }
-    .bloc2{
+    .bloc2 {
       background: url(./img/mobilebg3.png);
+      margin: 0;
+      .aboutbox {
+        margin: 5px;
+      }
     }
-
   }
 }
 
-* {
-  margin: 0;
-  padding: 0;
-}
+  * {
+    margin: 0;
+    padding: 0;
+  }
 
-html {
-  overflow-x: hidden;
-}
+  html {
+    overflow-x: hidden;
+    margin: 0;
+  }
+
 
 body {
   overflow-x: hidden;
   background-image: url(./img/DSC00030.jpg);
   //background-color: #0093e9;
- // background-color: #f28986;
+  // background-color: #f28986;
   //background-image: linear-gradient(160deg, #f28986 0%, #6b7a99 100%);
 
   background-size: cover;
@@ -176,7 +187,7 @@ header {
   position: relative;
   height: 100vh;
   text-align: center;
-  
+
   background-size: cover;
 
   h1 {
