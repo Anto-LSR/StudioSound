@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@supports (-webkit-touch-callout: none) {
+  body {
+    background-size: auto 100vh;
+  }
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -10,9 +16,9 @@ html {
 
 body {
   overflow-x: hidden;
+  background-image: url(./img/DSC00030.jpg);
   background-color: #0093e9;
   background-color: #f28986;
-  background-image: linear-gradient(160deg, #f28986 0%, #6b7a99 100%);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -79,6 +85,7 @@ h1 {
   margin-bottom: 0.25rem;
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
+  text-shadow: 4px 3px 0px black;
 }
 
 h3 {
@@ -155,11 +162,13 @@ header #burgerBtn {
   position: relative;
   height: 100vh;
   text-align: center;
+  background-size: cover;
 }
 
 .homePage h1 {
   margin-top: 1em;
   font-size: 34px;
+  text-shadow: none;
 }
 
 .homePage h3 {
@@ -217,6 +226,7 @@ header #burgerBtn {
 .page1 h1 {
   padding-top: 2em;
   margin-bottom: 1em;
+  text-shadow: none;
 }
 
 .openNav {
@@ -721,6 +731,7 @@ h2 {
 
 .bloc2 h1 {
   padding-top: 2.5em;
+  text-shadow: none;
 }
 
 .bloc2 .aboutbox {
@@ -801,6 +812,7 @@ h2 {
 
 #contactBox h1 {
   margin: 0;
+  text-shadow: none;
 }
 
 .landScapeAlert {
@@ -833,6 +845,7 @@ h2 {
 @media screen and (min-width: 768px) {
   header h1 {
     font-size: 30px;
+    text-shadow: none;
   }
   header .fas {
     font-size: 30px;
@@ -853,6 +866,9 @@ h2 {
   .homePage .arrow span {
     width: 50px;
     height: 50px;
+  }
+  .page1 {
+    padding: 0;
   }
   .page1 .cardsArrow {
     display: -webkit-box;
@@ -891,6 +907,7 @@ h2 {
   body #desktopNav h1 {
     opacity: 0;
     font-size: 24px;
+    text-shadow: none;
   }
   body #desktopNav ul {
     display: -webkit-box;
@@ -916,6 +933,27 @@ h2 {
     color: white;
     font-family: "Oswald", sans-serif;
     font-weight: 300;
+    position: relative;
+    overflow: hidden;
+  }
+  body #desktopNav ul li::after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    color: white;
+    border-bottom: 1px solid white;
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+    -webkit-transition: all ease 300ms;
+    transition: all ease 300ms;
+  }
+  body #desktopNav ul li:hover::after {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
   body .homePage {
     height: 100vh;
@@ -930,17 +968,19 @@ h2 {
     position: fixed;
     width: auto;
     left: 50%;
-    top: 20%;
-    -webkit-transform: translate(-50%);
-            transform: translate(-50%);
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
     z-index: 150;
+    text-shadow: 7px 7px 0px black;
+    margin: 0;
   }
   body .homePage h3 {
     position: absolute;
     left: 50%;
     top: 63%;
-    -webkit-transform: translate(-50%, -53%);
-            transform: translate(-50%, -53%);
+    -webkit-transform: translate(-50%, -63%);
+            transform: translate(-50%, -63%);
     background: black;
   }
   body .homePage .arrow {
@@ -1031,8 +1071,8 @@ h2 {
       font-size: 120px;
     }
     100% {
-      left: 0%;
-      top: -2.1%;
+      left: 1%;
+      top: 0%;
       font-size: 0px;
       font-size: 24px;
       -webkit-transform: translate(0%);
@@ -1045,8 +1085,8 @@ h2 {
       font-size: 120px;
     }
     100% {
-      left: 0%;
-      top: -2.1%;
+      left: 1%;
+      top: 0%;
       font-size: 0px;
       font-size: 24px;
       -webkit-transform: translate(0%);
@@ -1060,8 +1100,8 @@ h2 {
   }
   @-webkit-keyframes reversedAnimTitle {
     0% {
-      left: 0%;
-      top: -2.1%;
+      left: 1%;
+      top: 0%;
       font-size: 0px;
       font-size: 24px;
       -webkit-transform: translate(0%);
@@ -1073,8 +1113,8 @@ h2 {
   }
   @keyframes reversedAnimTitle {
     0% {
-      left: 0%;
-      top: -2.1%;
+      left: 1%;
+      top: 0%;
       font-size: 0px;
       font-size: 24px;
       -webkit-transform: translate(0%);
@@ -1273,6 +1313,15 @@ h2 {
       background-image: url("./img/DSC00020v2.png");
     }
   }
+  .bloc2 {
+    height: 100vh;
+    padding: 0;
+    margin-top: 0;
+    margin: 0;
+  }
+  .bloc2 .arrow-up {
+    top: 93%;
+  }
   .aboutContainer {
     display: -ms-grid;
     display: grid;
@@ -1280,11 +1329,15 @@ h2 {
         grid-template-columns: repeat(2, 1fr);
     -ms-flex-pack: distribute;
         justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 100vw;
+    grid-gap: 10%;
   }
   .aboutContainer .aboutbox {
     width: 25em;
-    margin: 5em;
+    margin: 1em;
   }
   .aboutContainer .aboutbox .boxContent ul li {
     font-size: 16px;
