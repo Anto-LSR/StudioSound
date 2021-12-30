@@ -318,7 +318,8 @@ listenBtn5.addEventListener('click', () => {
 })
 listenBtn6.addEventListener('click', () => {
 
-  makeIframe.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/ZbbSowf_pR0?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+  makeIframe.innerHTML = '<div class = "comingSoon" id = "comingSoon"> <h4>COMING SOON</h4> </div>'
+  
   modal.style.display = 'flex'
 })
 listenBtn7.addEventListener('click', () => {

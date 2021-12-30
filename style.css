@@ -1,22 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400&display=swap");
 @supports (-webkit-touch-callout: none) {
-  body {
-    background: black;
-  }
-  body header {
-    opacity: 1 !important;
-    background: black;
-  }
   body .homePage {
-    background: url(./img/mobilebg1.png);
+    margin: 0;
+    background: url(./img/mobilebg3.png);
+    background-size: 100%;
+  }
+  body .homePage h1 {
+    padding-top: 3em;
   }
   body .page1 {
-    background: url(./img/mobilebg2.png);
+    background: url(./img/mobilebg4.png);
     padding: 0;
+    background-size: 100%;
+  }
+  body .page1 h1 {
+    margin-top: 0;
   }
   body .bloc2 {
     background: url(./img/mobilebg3.png);
     margin: 0;
+    background-size: 100%;
+  }
+  body .bloc2 h1 {
+    padding-top: 1em;
   }
   body .bloc2 .aboutbox {
     margin: 5px;
@@ -121,6 +127,21 @@ h3 {
   -webkit-transition: all 300ms ease;
   transition: all 300ms ease;
   margin-left: 1em;
+}
+
+h4 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  font-size: 24px;
+  color: white;
+  margin-top: 0.25rem;
+  margin-left: 0.5rem;
+  margin-bottom: 0.25rem;
+  -webkit-transition: all 300ms ease;
+  transition: all 300ms ease;
+  text-shadow: 4px 3px 0px black;
+  margin: 24px;
 }
 
 .fas {
@@ -558,12 +579,12 @@ header #burgerBtn {
 }
 
 .card3 {
-  background: url("./img/Stella.jpg") right center no-repeat;
-  background-size: 600px;
+  background: url("./img/jamieGallienne.jpg") right center no-repeat;
+  background-size: 380px;
 }
 
 .card3:hover {
-  background: url("./img/Stella.jpg") left center no-repeat;
+  background: url("./img/jamieGallienne.jpg") bottom left no-repeat;
   background-size: 800px;
 }
 
@@ -580,12 +601,12 @@ header #burgerBtn {
 }
 
 .card5 {
-  background: url("./img/jamieGallienne.jpg") right center no-repeat;
-  background-size: 380px;
+  background: url("./img/Stella.jpg") right center no-repeat;
+  background-size: 600px;
 }
 
 .card5:hover {
-  background: url("./img/jamieGallienne.jpg") bottom left no-repeat;
+  background: url("./img/Stella.jpg") left center no-repeat;
   background-size: 800px;
 }
 
@@ -1030,7 +1051,7 @@ h2 {
     position: fixed;
     width: auto;
     left: 50%;
-    top: 50%;
+    top: 46%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     z-index: 150;
@@ -1044,6 +1065,7 @@ h2 {
     -webkit-transform: translate(-50%, -63%);
             transform: translate(-50%, -63%);
     background: black;
+    padding-left: 2px;
   }
   body .homePage .arrow {
     display: none;
@@ -1123,9 +1145,6 @@ h2 {
   }
   body .page1 .resetZi {
     z-index: 100;
-  }
-  body .page1 .squeeze {
-    width: 200%;
   }
   body .animTitle {
     -webkit-animation: moveTitle 1000ms forwards;
