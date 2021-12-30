@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700;800;900&family=Roboto+Condensed:wght@300;400&display=swap");
 @supports (-webkit-touch-callout: none) {
   body {
     background: black;
@@ -50,6 +50,10 @@ body {
 
 .hidden {
   display: none !important;
+}
+
+.modalContainer {
+  display: none;
 }
 
 #moreBtn {
@@ -730,6 +734,10 @@ h2 {
   background-color: #8b2635;
 }
 
+#desktopAbout {
+  display: none;
+}
+
 .bloc2 {
   margin-top: 3em;
   text-align: center;
@@ -798,7 +806,7 @@ h2 {
 
 .bloc2 .aboutbox .boxContent img {
   width: 30%;
-  background-color: #5a7699;
+  background-color: #f89f4c;
   border-radius: 10px;
   border: 2px solid black;
 }
@@ -859,7 +867,7 @@ h2 {
   }
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   header h1 {
     font-size: 30px;
     text-shadow: none;
@@ -899,6 +907,43 @@ h2 {
   }
   .page1 .cardsContainer .container {
     width: 50vw;
+  }
+  .aboutContainer {
+    display: none;
+  }
+  #desktopAbout {
+    margin-top: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100vw;
+  }
+  #desktopAbout img {
+    min-height: 570px;
+    width: 570px;
+    border-radius: 10px;
+  }
+  #desktopAbout #aboutText {
+    background-color: #00000087;
+    border: 3px solid black;
+    min-height: 570px;
+    width: 570px;
+    border-radius: 10px;
+    margin-top: 2em;
+  }
+  #desktopAbout #aboutText p {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    text-shadow: 1px 1px 2px black;
   }
 }
 
@@ -1059,6 +1104,9 @@ h2 {
     -webkit-box-shadow: 3px 6px 6px 1px black;
             box-shadow: 3px 6px 6px 1px black;
     border: 1px solid black;
+  }
+  body .page1 .card .fa:hover {
+    color: #c0785e;
   }
   body .page1 #cardsContainer_2 {
     display: -webkit-box;
@@ -1335,13 +1383,14 @@ h2 {
     padding: 0;
     margin-top: 0;
     margin: 0;
+    position: relative;
   }
   .bloc2 .arrow-up {
     top: 93%;
+    z-index: 150;
   }
   .aboutContainer {
-    display: -ms-grid;
-    display: grid;
+    display: none;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
     -ms-flex-pack: distribute;
@@ -1358,6 +1407,85 @@ h2 {
   }
   .aboutContainer .aboutbox .boxContent ul li {
     font-size: 16px;
+  }
+  #desktopAbout {
+    margin-top: 3em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    width: 100vw;
+  }
+  #desktopAbout img {
+    min-height: 570px;
+    width: 570px;
+    border-radius: 10px;
+  }
+  #desktopAbout #aboutText {
+    background-color: #00000087;
+    border: 3px solid black;
+    min-height: 570px;
+    width: 570px;
+    border-radius: 10px;
+  }
+  #desktopAbout #aboutText p {
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+  }
+  .modalContainer {
+    height: 100vh;
+    width: 100vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: fixed;
+    top: 0;
+    background: #000000be;
+    z-index: 150;
+    display: none;
+  }
+  .modalContainer .modal {
+    background: #000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-radius: 10px;
+    position: relative;
+  }
+  .modalContainer .modal i {
+    position: absolute;
+    top: -18px;
+    background: #791515;
+    width: 40px;
+    height: 40px;
+    right: -25px;
+    text-align: center;
+    line-height: 38px;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    cursor: pointer;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease;
+  }
+  .modalContainer .modal i:hover {
+    background: #3f1a1a;
   }
 }
 /*# sourceMappingURL=style.css.map */
