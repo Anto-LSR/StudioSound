@@ -12,15 +12,14 @@
     }
     .homePage {
       margin: 0;
-      h1{
+      h1 {
         padding-top: 3em;
       }
       background: url(./img/mobilebg3.png);
       background-size: 100%;
-      
     }
     .page1 {
-      h1{
+      h1 {
         margin-top: 0;
       }
       background: url(./img/mobilebg4.png);
@@ -28,7 +27,7 @@
       background-size: 100%;
     }
     .bloc2 {
-      h1{
+      h1 {
         padding-top: 1em;
       }
       background: url(./img/mobilebg3.png);
@@ -40,6 +39,9 @@
     }
   }
 }
+
+
+
 
 * {
   margin: 0;
@@ -90,23 +92,15 @@ body {
   left: 50%;
   transform: translate(-50%, -5%);
   border-radius: 10px;
-  box-shadow: 3px 6px 6px 1px black;
+
   letter-spacing: 5px;
-  background: linear-gradient(
-    326deg,
-    rgba(255, 255, 255, 0.463) 0%,
-    black 100%
-  );
-  background-color: #c12e0c;
+
+  background-color: #e68f45;
+  border: 1px solid black;
   cursor: pointer;
   transition: all 300ms ease;
 }
 #moreBtn:hover {
-  background: linear-gradient(
-    326deg,
-    rgba(255, 255, 255, 0.463) 0%,
-    black 100%
-  );
   background-color: #8b2635;
 }
 
@@ -145,7 +139,7 @@ h3 {
   margin-left: 1em;
 }
 
-h4{
+h4 {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   letter-spacing: 0.3rem;
@@ -227,7 +221,6 @@ header {
 
   h3 {
     font-size: 18px;
-    
   }
 }
 
@@ -340,8 +333,8 @@ header {
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  top: 45%;
-  display: none;
+  top: 50%;
+  
 
   .leftArrow {
     position: relative;
@@ -483,7 +476,6 @@ header {
 }
 
 .card1 .listenBtn {
-  background: linear-gradient(326deg, rgba(0, 0, 0, 0.462623) 0%, black 100%);
   background-color: #f68a83;
 }
 
@@ -511,7 +503,6 @@ header {
 }
 
 .card2 .listenBtn {
-  background: linear-gradient(326deg, rgba(0, 0, 0, 0.462623) 0%, black 100%);
   background-color: #f89f4c;
 }
 
@@ -520,7 +511,6 @@ header {
 }
 
 .card3 {
-
   background: url("./img/jamieGallienne.jpg") right center no-repeat;
   background-size: 380px;
 }
@@ -538,6 +528,9 @@ header {
 .card3:hover .listenBtn {
   opacity: 1;
 }
+.card3 .listenBtn {
+  background-color: #141414;
+}
 
 .card5 {
   background: url("./img/Stella.jpg") right center no-repeat;
@@ -546,7 +539,6 @@ header {
 .card5:hover {
   background: url("./img/Stella.jpg") left center no-repeat;
   background-size: 800px;
-
 }
 .card5:hover h2 {
   opacity: 1;
@@ -558,7 +550,9 @@ header {
 .card5:hover .listenBtn {
   opacity: 1;
 }
-
+.card5 .listenBtn {
+  background-color: #141414;
+}
 .card6 {
   background: url("./img/kafi.jpg") center center no-repeat;
   background-size: 500px;
@@ -577,13 +571,16 @@ header {
 .card6:hover .listenBtn {
   opacity: 1;
 }
+.card6 .listenBtn {
+  background-color: #e68f45;
+}
 
 .card7 {
-  background: url("./img/hijasde.jpg") center center no-repeat;
-  background-size: 375px;
+  background: url("./img/sudoryarena.jpg") center center no-repeat;
+  background-size: 400px;
 }
 .card7:hover {
-  background: url("./img/hijasde.jpg") center right no-repeat;
+  background: url("./img/sudoryarena.jpg") center right no-repeat;
   background-size: 800px;
 }
 .card7:hover h2 {
@@ -595,6 +592,9 @@ header {
 
 .card7:hover .listenBtn {
   opacity: 1;
+}
+.card7 .listenBtn {
+  background-color: #899581;
 }
 
 .card8 {
@@ -614,6 +614,9 @@ header {
 
 .card8:hover .listenBtn {
   opacity: 1;
+}
+.card8 .listenBtn {
+  background-color: #a42721;
 }
 
 h2 {
@@ -648,10 +651,10 @@ h2 {
   font-family: "Oswald", sans-serif;
   color: rgb(255, 255, 255);
   font-size: 20px;
-  border: 1px solid white;
-
+  //border: 1px solid white;
+  border: none;
   outline: none;
-  width: 8em;
+  width: 6em;
   height: auto;
   text-align: center;
   position: absolute;
@@ -661,17 +664,12 @@ h2 {
   border-radius: 10px;
   box-shadow: 3px 6px 6px 1px black;
   letter-spacing: 5px;
-  background: linear-gradient(326deg, rgba(0, 0, 0, 0.462623) 0%, black 100%);
+  transition: all 300ms ease;
   background-color: #77a185;
   cursor: pointer;
 }
 
 .listenBtn:hover {
-  background: linear-gradient(
-    326deg,
-    rgba(255, 255, 255, 0.463) 0%,
-    black 100%
-  );
   background-color: #8b2635;
 }
 
@@ -773,6 +771,53 @@ h2 {
   display: none;
 }
 
+#languagePicker {
+  position: fixed;
+  display: flex;
+  top: 90%;
+  right: 0;
+  align-items: center;
+  border-left: 2px solid black;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
+  border-radius: 10px 0px 0px 10px;
+  background-color: #0c0c0c;
+  opacity: 0.5;
+  right: -91px;
+  transition: all 300ms ease;
+  z-index: 160;
+  cursor: pointer;
+
+  i {
+    margin: 3px;
+  }
+
+  .flags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 3px solid white;
+    border-radius: 0px;
+
+    img {
+      width: 1.5em;
+      margin: 10px;
+      border-radius: 50%;
+      outline: 2px solid rgb(0, 0, 0);
+      transition: all 300ms ease;
+    }
+
+    img:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+#languagePicker:hover {
+  right: 0%;
+  opacity: 1;
+}
+
 @media screen and (max-width: 768px) and (orientation: landscape) {
   .lockLandscape {
     display: none;
@@ -831,6 +876,7 @@ h2 {
     .cardsArrow {
       display: flex;
       cursor: pointer;
+      top: 45%;
     }
     .handswipe {
       left: 50%;
@@ -956,7 +1002,7 @@ h2 {
         top: 46%;
         transform: translate(-50%, -50%);
         z-index: 150;
-        text-shadow: 7px 7px 0px black;
+        text-shadow: 7px 7px 4px black;
         margin: 0;
       }
       h3 {
@@ -988,29 +1034,20 @@ h2 {
         left: 50%;
         transform: translate(-50%, -5%);
         border-radius: 10px;
-        box-shadow: 3px 6px 6px 1px black;
+
         letter-spacing: 5px;
-        background: linear-gradient(
-          326deg,
-          rgba(255, 255, 255, 0.463) 0%,
-          black 100%
-        );
-        background-color: #c12e0c;
+
+        box-shadow: 3px 6px 6px 1px black;
         cursor: pointer;
-        transition: all 300ms ease;
+        transition: all 100ms ease;
       }
       #moreBtn:hover {
-        background: linear-gradient(
-          326deg,
-          rgba(255, 255, 255, 0.463) 0%,
-          black 100%
-        );
         background-color: #8b2635;
       }
 
       #moreBtn:active {
-        width: 9em;
-        height: 2em;
+        background-color: #e68f45;
+        box-shadow: none;
       }
       .handswipe {
         display: none;
@@ -1049,7 +1086,6 @@ h2 {
       .resetZi {
         z-index: 100;
       }
-
     }
 
     .animTitle {
@@ -1341,5 +1377,54 @@ h2 {
         background: #3f1a1a;
       }
     }
+  }
+
+  #languagePicker {
+    position: fixed;
+    display: flex;
+    top: 88%;
+    right: 0;
+    align-items: center;
+    border-left: 3px solid black;
+    border-bottom: 3px solid black;
+    border-top: 3px solid black;
+    border-radius: 10px 0px 0px 10px;
+    background-color: #0c0c0c;
+
+    right: -140px;
+    transition: all 300ms ease;
+    z-index: 160;
+    cursor: pointer;
+
+    i {
+      margin: 3px;
+    }
+
+    .flags {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-left: 3px solid white;
+      border-radius: 0px;
+
+      img {
+        width: 3em;
+        margin: 10px;
+        border-radius: 50%;
+        outline: 3px solid rgb(0, 0, 0);
+        transition: all 300ms ease;
+      }
+
+      img:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  #languagePicker:hover {
+    right: 0%;
+  }
+  .setOpacity {
+    opacity: 0 !important;
   }
 }

@@ -19,13 +19,15 @@ function closeNav() {
 }
 
 var prevScrollpos = window.pageYOffset;
-
+let langpicker = document.getElementById("languagePicker");
 window.onscroll = function () {
   var currentScrollPos = window.pageYOffset;
   if (currentScrollPos === 0) {
     document.getElementById("header").classList.remove("headAnim");
+    langpicker.classList.add("setOpacity");
   } else {
     document.getElementById("header").classList.add("headAnim");
+    langpicker.classList.remove("setOpacity");
   }
   prevScrollpos = currentScrollPos;
 };
@@ -63,7 +65,6 @@ left.addEventListener("click", () => {
 
 slider.addEventListener("touchstart", (e) => {
   touchstartX = e.changedTouches[0].screenX;
-  
 });
 
 slider.addEventListener("touchend", (e) => {
@@ -163,43 +164,40 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
     }
   });
 
+  let listenBtn1 = document.getElementById("listenBtn1");
+  let listenBtn2 = document.getElementById("listenBtn2");
+  let listenBtn3 = document.getElementById("listenBtn3");
+  let listenBtn4 = document.getElementById("listenBtn4");
+  let listenBtn5 = document.getElementById("listenBtn5");
+  let listenBtn6 = document.getElementById("listenBtn6");
+  let listenBtn7 = document.getElementById("listenBtn7");
+  let listenBtn8 = document.getElementById("listenBtn8");
 
-let listenBtn1 = document.getElementById("listenBtn1")
-let listenBtn2 = document.getElementById("listenBtn2")
-let listenBtn3 = document.getElementById("listenBtn3")
-let listenBtn4 = document.getElementById("listenBtn4")
-let listenBtn5 = document.getElementById("listenBtn5")
-let listenBtn6 = document.getElementById("listenBtn6")
-let listenBtn7 = document.getElementById("listenBtn7")
-let listenBtn8 = document.getElementById("listenBtn8")
-
-  listenBtn1.addEventListener('click', () => {
-    window.open( 'https://youtu.be/zaqEVXdjpcY', '_blank')
-  })
-  listenBtn2.addEventListener('click', () => {
-    window.open( 'https://youtu.be/sJ6TeSy9UMc', '_blank')
-  })
-  listenBtn3.addEventListener('click', () => {
-    window.open( 'https://youtu.be/1lEheUTHiE4', '_blank')
-  })
-  listenBtn4.addEventListener('click', () => {
-    window.open( 'https://youtu.be/75YIaWZyTvg', '_blank')
-  })
-  listenBtn5.addEventListener('click', () => {
-    window.open( 'https://youtu.be/PSP3PbytbVY', '_blank')
-  })
-  listenBtn6.addEventListener('click', () => {
-    window.open( 'https://youtu.be/ZbbSowf_pR0', '_blank')
-  })
-  listenBtn7.addEventListener('click', () => {
-    window.open( 'https://soundcloud.com/vidaillac', '_blank')
-  })
-  listenBtn8.addEventListener('click', () => {
-    window.open( 'https://youtu.be/9-KEZHE2rSM', '_blank')
-  })
-
+  listenBtn1.addEventListener("click", () => {
+    window.open("https://youtu.be/zaqEVXdjpcY", "_blank");
+  });
+  listenBtn2.addEventListener("click", () => {
+    window.open("https://youtu.be/sJ6TeSy9UMc", "_blank");
+  });
+  listenBtn3.addEventListener("click", () => {
+    window.open("https://youtu.be/1lEheUTHiE4", "_blank");
+  });
+  listenBtn4.addEventListener("click", () => {
+    window.open("https://youtu.be/75YIaWZyTvg", "_blank");
+  });
+  listenBtn5.addEventListener("click", () => {
+    window.open("https://youtu.be/PSP3PbytbVY", "_blank");
+  });
+  listenBtn6.addEventListener("click", () => {
+    window.open("https://youtu.be/ZbbSowf_pR0", "_blank");
+  });
+  listenBtn7.addEventListener("click", () => {
+    window.open("https://soundcloud.com/vidaillac", "_blank");
+  });
+  listenBtn8.addEventListener("click", () => {
+    window.open("https://youtu.be/9-KEZHE2rSM", "_blank");
+  });
 }
-
 
 //DESKTOP VERSION
 
@@ -224,14 +222,17 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
   let mixnmast = document.getElementById("homeh3");
   let yAxis0 = document.getElementById("top");
 
+  let langpicker = document.getElementById("languagePicker");
   window.onscroll = function () {
     var currentScrollPos = window.scrollY;
     if (currentScrollPos === 0) {
       removeAnimDesktop();
       mixnmast.classList.remove("setOpacity");
+      langpicker.classList.add("setOpacity");
     } else {
       animDesktop();
       mixnmast.classList.add("setOpacity");
+      langpicker.classList.remove("setOpacity");
     }
     prevScrollpos = currentScrollPos;
   };
@@ -269,71 +270,67 @@ if (window.matchMedia("(min-width: 1025px)").matches) {
     }
   });
 
+  let closeModal = document.getElementById("closeModal");
+  let modal = document.getElementById("modalContainer");
 
-let closeModal = document.getElementById("closeModal");
-let modal = document.getElementById("modalContainer")
+  closeModal.addEventListener("click", () => {
+    modal.style.display = "none";
+    document.querySelectorAll("iframe").forEach(function (elem) {
+      elem.parentNode.removeChild(elem);
+    });
+  });
+  //LISTEN BTNS
+  let makeIframe = document.getElementById("makeIframe");
+  let listenBtn1 = document.getElementById("listenBtn1");
+  let listenBtn2 = document.getElementById("listenBtn2");
+  let listenBtn3 = document.getElementById("listenBtn3");
+  let listenBtn4 = document.getElementById("listenBtn4");
+  let listenBtn5 = document.getElementById("listenBtn5");
+  let listenBtn6 = document.getElementById("listenBtn6");
+  let listenBtn7 = document.getElementById("listenBtn7");
+  let listenBtn8 = document.getElementById("listenBtn8");
 
-closeModal.addEventListener('click', () => {
-modal.style.display = "none"
-document.querySelectorAll('iframe').forEach(
-  function(elem){
-    elem.parentNode.removeChild(elem);
-});
-})
-//LISTEN BTNS
-let makeIframe = document.getElementById("makeIframe")
-let listenBtn1 = document.getElementById("listenBtn1")
-let listenBtn2 = document.getElementById("listenBtn2")
-let listenBtn3 = document.getElementById("listenBtn3")
-let listenBtn4 = document.getElementById("listenBtn4")
-let listenBtn5 = document.getElementById("listenBtn5")
-let listenBtn6 = document.getElementById("listenBtn6")
-let listenBtn7 = document.getElementById("listenBtn7")
-let listenBtn8 = document.getElementById("listenBtn8")
+  listenBtn1.addEventListener("click", () => {
+    makeIframe.innerHTML =
+      '<iframe width="560" height="315" src="https://www.youtube.com/embed/zaqEVXdjpcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    modal.style.display = "flex";
+  });
+  listenBtn2.addEventListener("click", () => {
+    makeIframe.innerHTML =
+      '<iframe width="560" height="315" src="https://www.youtube.com/embed/sJ6TeSy9UMc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    modal.style.display = "flex";
+  });
+  listenBtn3.addEventListener("click", () => {
+    makeIframe.innerHTML =
+      '<iframe width="469" height="262" src="https://www.youtube.com/embed/1lEheUTHiE4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    modal.style.display = "flex";
+  });
+  listenBtn4.addEventListener("click", () => {
+    makeIframe.innerHTML =
+      '<iframe width="469" height="262" src="https://www.youtube.com/embed/75YIaWZyTvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    modal.style.display = "flex";
+  });
+  listenBtn5.addEventListener("click", () => {
+    makeIframe.innerHTML =
+      '<iframe width="560" height="315" src="https://www.youtube.com/embed/PSP3PbytbVY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+    modal.style.display = "flex";
+  });
+  listenBtn6.addEventListener("click", () => {
+    makeIframe.innerHTML =
+      '<div class = "comingSoon" id = "comingSoon"> <h4>COMING SOON</h4> </div>';
 
-listenBtn1.addEventListener('click', () => {
+    modal.style.display = "flex";
+  });
+  listenBtn7.addEventListener("click", () => {
+    makeIframe.innerHTML =
+      '<iframe width="560" height="315" src="https://www.youtube.com/embed/S5lt9NRftDU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 
-  makeIframe.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/zaqEVXdjpcY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-  modal.style.display = 'flex'
-})
-listenBtn2.addEventListener('click', () => {
+    modal.style.display = "flex";
+  });
+  listenBtn8.addEventListener("click", () => {
+    makeIframe.innerHTML =
+      '<iframe width="560" height="315" src="https://www.youtube.com/embed/9-KEZHE2rSM?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
 
-  makeIframe.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/sJ6TeSy9UMc?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-  modal.style.display = 'flex'
-})
-listenBtn3.addEventListener('click', () => {
-
-  makeIframe.innerHTML = '<iframe width="469" height="262" src="https://www.youtube.com/embed/1lEheUTHiE4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-  modal.style.display = 'flex'
-})
-listenBtn4.addEventListener('click', () => {
-
-  makeIframe.innerHTML = '<iframe width="469" height="262" src="https://www.youtube.com/embed/75YIaWZyTvg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-  modal.style.display = 'flex'
-})
-listenBtn5.addEventListener('click', () => {
-
-  makeIframe.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/PSP3PbytbVY?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-  modal.style.display = 'flex'
-})
-listenBtn6.addEventListener('click', () => {
-
-  makeIframe.innerHTML = '<div class = "comingSoon" id = "comingSoon"> <h4>COMING SOON</h4> </div>'
-  
-  modal.style.display = 'flex'
-})
-listenBtn7.addEventListener('click', () => {
-
-  makeIframe.innerHTML = '<iframe width="100%" height="300" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/339447816&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true"></iframe><div style="font-size: 10px; color: #cccccc;line-break: anywhere;word-break: normal;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; font-family: Interstate,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Garuda,Verdana,Tahoma,sans-serif;font-weight: 100;"><a href="https://soundcloud.com/vidaillac" title="Hijas de" target="_blank" style="color: #cccccc; text-decoration: none;">Hijas de</a> · <a href="https://soundcloud.com/vidaillac/marinheros" title="Marin&#x27;heros" target="_blank" style="color: #cccccc; text-decoration: none;">Marin&#x27;heros</a></div>'
-  
-  modal.style.display = 'flex'
-})
-listenBtn8.addEventListener('click', () => {
-
-  makeIframe.innerHTML = '<iframe width="560" height="315" src="https://www.youtube.com/embed/9-KEZHE2rSM?controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
-  
-  modal.style.display = 'flex'
-})
-
-
+    modal.style.display = "flex";
+  });
 }
