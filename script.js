@@ -1,3 +1,17 @@
+//LANG
+let planet = document.getElementById("languagePicker");
+let clicked = false
+planet.addEventListener('click', () => {
+  planet.classList.add('showFlags')
+  timer = setTimeout(function () {
+    planet.classList.remove('showFlags')
+
+    clearTimeout(timer);
+  }, 2500);
+  
+})
+
+
 
 // NAVBAR
 
@@ -201,7 +215,24 @@ if (window.matchMedia("(max-width: 1024px)").matches) {
 
 //DESKTOP VERSION
 
+
+
 if (window.matchMedia("(min-width: 1025px)").matches) {
+
+//   //LANG
+
+// planet.addEventListener('click', () => {
+//   planet.classList.add('showFlags')
+  
+// })
+// planet.addEventListener('mouseleave', () => {
+//   timer = setTimeout(function () {
+//     planet.classList.remove('showFlags')
+
+//     clearTimeout(timer);
+//   }, 1500);
+// })
+
   let maintitle = document.getElementById("maintitle");
   let deskUl = document.getElementById("deskUl");
 

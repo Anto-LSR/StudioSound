@@ -934,9 +934,9 @@ h2 {
           transform: scale(1.1);
 }
 
-#languagePicker:hover {
-  right: 0%;
-  opacity: 1;
+.showFlags {
+  right: 0 !important;
+  opacity: 1 !important;
 }
 
 @media screen and (max-width: 768px) and (orientation: landscape) {
@@ -1630,6 +1630,10 @@ h2 {
   }
   #languagePicker:hover {
     right: 0%;
+    opacity: 1;
+  }
+  .showFlags {
+    right: 0 !important;
   }
   .setOpacity {
     opacity: 0 !important;
