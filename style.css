@@ -347,15 +347,19 @@ header #burgerBtn {
   top: 50%;
 }
 
+.cardsArrow .fas {
+  margin: 0;
+}
+
 .cardsArrow .leftArrow {
   position: relative;
-  left: 1em;
+  left: 10px;
   z-index: 100;
 }
 
 .cardsArrow .rightArrow {
   position: relative;
-  right: 1em;
+  right: 10px;
   z-index: 100;
 }
 
@@ -939,7 +943,7 @@ h2 {
   opacity: 1 !important;
 }
 
-@media screen and (max-width: 768px) and (orientation: landscape) {
+@media screen and (max-width: 1024px) and (orientation: landscape) {
   .lockLandscape {
     display: none;
   }
@@ -947,18 +951,30 @@ h2 {
     overflow: hidden;
   }
   .landScapeAlert {
-    display: block;
     text-align: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
   .landScapeAlert h3 {
     font-size: 24px;
   }
   .landScapeAlert img {
     width: 13%;
+  }
+  #languagePicker {
+    display: none;
   }
 }
 

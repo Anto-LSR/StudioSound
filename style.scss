@@ -334,17 +334,20 @@ header {
   display: flex;
   justify-content: space-between;
   top: 50%;
+  .fas{
+    margin: 0;
+  }
   
 
   .leftArrow {
     position: relative;
-    left: 1em;
+    left: 10px;
     z-index: 100;
   }
 
   .rightArrow {
     position: relative;
-    right: 1em;
+    right: 10px;
     z-index: 100;
   }
 }
@@ -819,7 +822,7 @@ h2 {
 
 
 
-@media screen and (max-width: 768px) and (orientation: landscape) {
+@media screen and (max-width: 1024px) and (orientation: landscape) {
   .lockLandscape {
     display: none;
   }
@@ -827,10 +830,12 @@ h2 {
     overflow: hidden;
   }
   .landScapeAlert {
-    display: block;
     text-align: center;
     align-items: center;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     h3 {
       font-size: 24px;
     }
@@ -838,6 +843,8 @@ h2 {
       width: 13%;
     }
   }
+
+  #languagePicker{display: none;}
 }
 
 // VERSION TABLETTE
@@ -878,6 +885,7 @@ h2 {
       display: flex;
       cursor: pointer;
       top: 45%;
+      
     }
     .handswipe {
       left: 50%;
